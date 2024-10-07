@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+:root{
+    --cmn-clr: #02918b;
+    --white:#ffffff;
+    --font-family: "Open Sans", sans-serif;
+    --yellow: #cfc91d;
+}
+
+/* NAV  */
+nav {
+    background-color: var(--cmn-clr);
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    display: inline-block;
+    padding: 26px 25.5px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    font-weight: 800;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background: var(--yellow);
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+    
+}
+/* NAV END */
+
+
+
+/* BANNER */
+#banner {
+    background-image: url('./images/banner.png');
+    height: 730px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+    background-position: center;
+}
+#banner .row{
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 730px;
+}
+#banner .row h4{
+    font-size: 30px;
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+#banner .row h2{
+    font-size: 68px;
+    font-family: var(--font-family);
+    font-weight: 800;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+}
+#banner .row p{
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+#banner .row img{
+    margin: 50px 0;
+}
+#banner .row a{
+    padding: 20px 40px;
+    display: inline-block   ;
+    background: var(--yellow);
+    font-family: var(--font-family);
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+}
+#banner .row a::before{
+    content: '';
+    position: absolute;
+    transition: 0.5s;
+    width:0%;
+    height: 0%;
+    border-top:  2px solid var(--white);
+    left: -15px;
+    top: -10px;
+}
+#banner .row a::after{
+    content: '';
+    position: absolute;
+    transition: 0.5s;
+    width: 0%;
+    height: 0%;
+    border-left: 2px solid var(--white);
+    left: -10px;
+    top: -15px;
+}
+#banner .row a:hover::after{
+    width: 110%;
+    height: 100%;
+    
+}
+#banner .row a:hover::before{
+    width: 110%;
+    height: 100%;
+    
+}
+/* BANNER END */
